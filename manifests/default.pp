@@ -40,7 +40,14 @@ package { [
 class { 'apache': }
 
 apache::dotconf { 'custom':
-  content => 'EnableSendfile Off',
+  content => 
+    'EnableSendfile Off
+
+    <Directory /vhosts/>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+     </Directory>',
 }
 
 apache::module { 'rewrite': }
@@ -79,7 +86,6 @@ class { 'php::devel':
 class { 'php::pear':
   require => Class['php'],
 }
-
 
 
 class { 'xdebug':
