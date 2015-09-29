@@ -43,10 +43,18 @@ export PS1='\[$bold\]\[$black\][\[$dk_blue\]\@\[$black\]]-[\[$green\]\u\[$yellow
 
 alias ls='ls -F --color=always'
 alias dir='dir -F --color=always'
-alias ll='ls -l'
-alias cp='cp -iv'
-alias rm='rm -i'
-alias mv='mv -iv'
+alias ll='ls -la'
+alias cp='cp -v'
+alias mv='mv -v'
 alias grep='grep --color=auto -in'
 alias v='vim'
 alias ..='cd ..'
+alias phpunit=./vendor/bin/phpunit
+alias doctrine=./vendor/bin/doctrine
+alias phpcs=./vendor/bin/phpcs
+alias phpmd=./vendor/bin/phpmd
+alias phpcpd=./vendor/bin/phpcpd
+alias phploc=./vendor/bin/phploc
+alias pdepend=./vendor/bin/pdepend
+alias phing=./vendor/bin/phing
+
